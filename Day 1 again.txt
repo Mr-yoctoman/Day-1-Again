@@ -1,0 +1,120 @@
+﻿Networking refers to the practice of connecting computers, devices, or people to enable communication, resource sharing, and collaboration. In the context of computers and technology, networking typically involves the interconnection of devices and systems through various means such as wired or wireless connections, with the goal of facilitating data exchange, accessing shared resources like files or printers, and enabling communication between users.
+Networking can be categorized into different types : 
+1. Local Area Network.
+2. Wide Area Network.
+3. Wireless Networks.
+4. Internet.
+5.Intranet.
+6. Virtual private network.
+Networking involves various components, including:
+1. Devices - such as computers, routers, switches, modems, and servers.
+2. Protocols - Standards that define how data is transmitted and received over a network, like TCP/IP.
+3. Infrastructure - The physical and virtual components that support network connectivity, such as cables, routers, switches, and servers.
+4. Services - Applications and utilities that run on networks, including email, file sharing, web browsing, and video conferencing.
+Protocols are sets of rules and standards that govern how data is transmitted and received between devices or systems in a network. They define the format, timing, sequencing, error checking, and other aspects of communication to ensure that devices can understand each other and exchange information reliably. Protocols are crucial for enabling interoperability and compatibility between different types of devices and networks. 
+Here are some key aspects and types of protocols:
+1. Communication layers - Protocols are often organised into layers, with each layer responsible for a specific aspect of communication. The OSI model and the TCP/IP model are two common frameworks used to conceptualise these layers. Each layer performs specific functions, such as addressing, routing, error detection, or data formatting.
+2. Common Protocols - There are numerous protocols used in networking, each serving different purposes. Some of the most widely used protocols include:
+A. Internet Protocol  - This protocol is responsible for addressing and routing packets of data across networks, enabling communication between devices. 
+B. Transmission Control Protocol - TCP provides reliable, connection-oriented communication by ensuring that data packets are delivered in the correct order and without errors.
+C. User Datagram Protocol - UDP is a simpler, connectionless protocol that provides faster but less reliable data transmission compared to TCP. It is often used for time-sensitive applications like streaming media or online gaming.
+D. Hypertext Transfer Protocol - HTTP is the foundation of data communication on the World Wide Web. It defines how web browsers and servers exchange hypertext documents, such as HTML pages.
+E. Simple Mail Transfer Protocol - It is used for sending email messages between servers.
+F. File Transfer Protocol - It facilitates the transfer of files between computers on a network.
+G. Secure Shell - It provides secure remote access and control over networked devices.
+H. Domain Name System - It transfer domain name into IP addresses, allowing users to access websites using human-readable names.
+                        
+                                MORE ABOUT HTTP
+HTTP , or Hypertext Transfer Protocol, is an application layer protocol used for transmitting hypermedia documents, such as HTML files, over the internet. It forms the foundation of data communication on the World Wide Web and defines how web browsers and servers interact to exchange hypertext documents. 
+Here’s more information about HTTP : 
+1. Client-server Model - HTTP operates on a client-server model, where the client sends request to the server and the server responds with the requested resources, such as HTML pages, images, or other media files.
+2. Statelessness - HTTP is a stateless protocol, meaning that each request from the client to the server is independent and does not retain any information about previous requests. This design simplifies communication and enhances scalability but requires additional mechanisms, such as cookies or session tokens, to maintain stateful interactions between the client and server.
+3. Request - Response Cycle - The communication between the client and server in HTTP follows a request-response cycle : 
+A. The client sends an HTTP request to the server, specifying the desired resource and any additional parameters  or headers.
+B. The server processes the request, retrieves the requested resource, and generates an HTTP response.
+C. The server sends the HTTP response back to the client, containing the requested resource along with metadata, such as status codes and headers.
+4. HTTP Methods - HTTP defines several methods, or verbs, that indicate the action to be performed on the specified resource. The most commonly used HTTP methods include : 
+A. GET - Retrieves a representation of the specified resource.
+B. POST - Submits data to be processed by the server, typically used for submitting form data or uploading files.
+C. PUT - Updates the specified resource with the provided data.
+D. DELETE - Removes the headers of the specified resource.
+E. HEAD  - Retrieves the headers of the specified resource without the actual content.
+F. OPTIONS - Retrieves information about the communication options available for the specified resource.
+        STATUS CODES : 
+HTTP response include status codes that indicate the outcome of the request. Some common status codes include - 
+1. 200 - OK - The request was successful.
+2. 404 - Not Found - The requested resource could not be found.
+3. 500 - Internal Server Error - The server encountered an unexpected condition that prevented it from fulfilling the request.
+         SECURITY 
+HTTP does not provide inherent security mechanisms, making it vulnerable to various attacks, such as eavesdropping, tampering and man-in-the-middle attacks. To address these security concerns, HTTPS employs encryption to secure the communication between the client and server, ensuring data confidentiality and integrity. 
+        HTTP v1 
+HTTP version 1.0 the initial version of the HTTP, was standardised in 1996. It served as the foundation for modern web communication and played a significant role in the early development of World Wide Web. Here are some key features and characteristics of HTTP version 1.0
+1. Connection Model - It uses a simple connection model known as connection per request. This means that for each request made by the client , a separate connection is established to the server. After the response is received, the connection is closed.
+2. Stateless Protocol - Like subsequent versions of HTTP, HTTP version 1.0 is stateless, meaning that each request is independent and does not retain any information about previous requests. This simplicity aids in scalability but requires additional mechanisms, such as cookies or session tokens, to maintain stateful interactions between the client and server.
+3. Request Methods - It defines several request methods, including - GET, POST, HEAD, PUT, DELETE
+4. Header fields - It includes various header fields in both request and response messages to provide additional metadata and control over the communication. Header fields can include information such as the content type, content length, caching directives, and more.,
+5. No persistent connections - One significant limitation of HTTP version 1.0 is the lack of support for persistent connections. With the “connection per request” model, each request incurs the overhead of establishing a new TCP connection, leading to increased latency and decreased performance, especially for web pages with multiple resources.
+                HTTP Version 2.0
+It is a major revision of the Hypertext transfer protocol, designed to improve the performance, efficiency, and security of web communication. It was standardised by the Internet Engineering Task Force in May 2015, succeeding version 1.
+Here are some key features and improvements introduced in version 2.0
+1. Binary protocol - It uses a binary framing layer instead of the text-based format used in HTTP version 1. This binary framing enables more efficient parsing and processing of messages, reducing overhead and improving performance.
+2. Multiplexing - One of the most significant enhancements in version 2.0 is support for multiplexing, which allows multiple requests and responses to be sent and received over a single TCP connection simultaneously. This eliminates the need for multiple connections per request, reducing latency and improving resource utilization.
+3. Header Compression - It introduces header compression using the HPACK algorithm, which significantly reduces the overhead associated with transmitting header fields in each request and response. By compressing headers, HTTP version 2.0 reduces bandwidth usage and improves performance, particularly for sites with many small objects.
+4. Server Push - It introduced the concept of server push, which allows servers to proactively send resources to the client cache before they are requested. This feature can improve page load times by anticipating and preloading resources needed to render a page, such as images, CSS files, or javascript libraries.
+5. Stream Prioritization - It introduces support for stream prioritisation, allowing clients to specify the importance of individual resources within a single connection. This enables more efficient resource allocation and ensures that critical resources are delivered promptly, improving overall page load times.
+6. Connection Multiplexing - It supports connection multiplexing, which enables multiple logical streams of data to be transmitted over a single TCP connection. This reduces the overhead associated with establishing and maintaining multiple connections, improving efficiency and reducing latency.
+7. Enhanced Security - While not a direct feature of the protocol itself, the version 2.0 encourages the use of TLS encryption for all communication. TLS provides encryption and authentication, ensuring the confidentiality and integrity of data exchanged between clients and servers.
+        SUMMARY : 
+Overall, HTTP plays a crucial role in facilitating communication between web clients and servers, enabling the retrieval and exchange of information over the internet.
+—————— #########——————————##################————————————————
+                UNDERSTANDING OBJECTS AND THEIR INTERNAL REPRESENTATION IN JS
+
+
+In the realm of javascript programming, objects are fundamental entities that form the backbone of the language. 
+INTRODUCTION TO OBJECTS IN JAVASCIRPT
+At its core, javascript is an object-oriented language, meaning that it revolves around the concept of objects. Objects in javascript are collections of key-value pairs, where each key is a string and each value can be any data type, including other objects, functions, arrays, or primitive values.
+Const person = { name : “John” , age : 30 , city : “New York” };
+In this example , person is an object with three properties name, age and city each associated with a corresponding value.
+
+
+INTERNAL REPRESENTATION OF OBJECTS
+
+
+Internally, objects in javascript are often implemented using hash tables or similar data structures, where each property is stored as a key - value pair. This implementation allows for efficient lookup and manipulation of properties.
+{
+  “name” : “John”,
+   “age” : 30,
+   “city” : “New York”
+}
+Property Access and Mutation
+Accessing and mutating properties of javascript objects is a common operation in everyday programming. I can access object properties using dot notation or bracket notation:
+Console.log(person.name); - output will be JOHN
+Console.log(person[“age”]); - output will be 30
+MUTATING OBJECT PROPERTIES
+Person.age  = 31;
+person[“city”] = “San Francisco”;
+Both dot notation and bracket notation achieve the same result, but bracket notation allows for dynamic property access using variables or expressions: 
+Const propertyName = “age”;
+Console.log(person[propertyName]); - output is 31
+
+
+OBJECT METHODS AND PROTOTYPES
+
+
+In addition to properties, javascript objects can also contain methods, which are functions associated with the object. These methods can perform various operations and computations using the objects properties.
+Const circle = {
+radius : 5,
+area : function () {
+        return Math.PI * this.radius * this.radius;
+}
+};
+Console.log(circle.area());  - output 78.54
+
+
+Javascript objects also have a prototype, which serves as a fallback mechanism for property and method lookup. When you access a property or method on an object, the javascript engine first looks for it in the object itself. If it’s not found, it continues the search in the objects’s prototype, and so on, until it reaches the end of the prototype chain.
+
+
+SUMMARY 
+
+
+In summary , objects are integral to javascript programming, providing a flexible and powerful mechanism for organising and manipulating data. Whether I be building web applications, libraries, or frameworks, mastering objects in javascript is crucial step toward becoming a proficient developer.
